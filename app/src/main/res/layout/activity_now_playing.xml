@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/first_ll_padding_bottom">
+        <TextView
+            android:id="@+id/now_playing_song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/song_sample"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/first_ll_textview1_margin_top"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/now_playing_song_image"
+            android:layout_width="@dimen/song_image2_width"
+            android:layout_height="@dimen/song_image2_height"
+            tools:src="@drawable/alarm"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/first_ll_imageview_margin_top"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/imagedescription"
+            android:adjustViewBounds="true"/>
+        <TextView
+            android:id="@+id/now_playing_song_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/artist_sample"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/first_ll_textview2_margin_top"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:text="0 min, 0 sec"
+                android:id="@+id/start_textView"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/first_ll_textview3_margin_top"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 min, 0 sec "
+                android:id="@+id/final_textView"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/first_ll_textview3_margin_top"/>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="20" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/second_ll_margin_top">
+            <ImageView
+                android:id="@+id/backward_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="contentDescription"
+                android:src="@drawable/backward_arrow"
+                android:layout_marginEnd="@dimen/second_ll_imageview_margin_end"/>
+            <ImageView
+                android:id="@+id/play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="contentDescription"
+                android:src="@drawable/play_arrow" />
+            <ImageView
+                android:id="@+id/forward_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="contentDescription"
+                android:src="@drawable/forward_arrow"
+                android:layout_marginStart="@dimen/second_ll_imageview_margin_start"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
